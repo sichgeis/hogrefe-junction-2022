@@ -2,7 +2,14 @@
 
 ## Requirements
 
-Install requires plugin. Run "serverless plugin install -n serverless-python-requirements" to install it.
+Install requires plugin. Run 
+
+```
+serverless plugin install -n serverless-python-requirements
+serverless plugin install -n serverless-offline
+```
+
+to install it.
 
 ## Usage
 
@@ -31,19 +38,16 @@ Which should result in response similar to the following (removed `input` conten
 }
 ```
 
-### Local development
+### Local Development
 
-You can invoke your function locally by using the following command:
+Enter the python environment with:
 
-```bash
-serverless invoke local --function hello
+```commandline
+source bin/activate
 ```
 
-Which should result in response similar to the following:
+Start api locally with:
 
-```
-{
-  "statusCode": 200,
-  "body": "{\n  \"message\": \"Go Serverless v3.0! Your function executed successfully!\",\n  \"input\": \"\"\n}"
-}
+```commandline
+serverless offline
 ```
