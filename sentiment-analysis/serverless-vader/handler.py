@@ -9,14 +9,9 @@ def handle(event, context):
     body = json.loads(event["body"])
     text = body["text"]
 
-    vs = analyzer.polarity_scores(text)
+    score = analyzer.polarity_scores(text)
+    compoundScore = score["compound"]
 
-    body = {
-        "sentence": sentence,
-        "score": str(vs),
-        "event": event
-    }
-
-    response = {"statusCode": 200, "body": json.dumps(body)}
+    response = {"statusCode": 200, "body": json.dumps(compoundScore)}
 
     return response
