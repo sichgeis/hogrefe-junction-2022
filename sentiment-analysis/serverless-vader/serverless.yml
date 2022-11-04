@@ -1,0 +1,20 @@
+org: cgeisler
+app: sentiment
+service: sentiment
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: python3.8
+  region: eu-central-1
+
+plugins:
+  - serverless-python-requirements
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - httpApi:
+          path: /
+          method: get
