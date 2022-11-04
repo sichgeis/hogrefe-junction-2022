@@ -14,7 +14,7 @@ plugins:
 
 functions:
   hello:
-    handler: handler.hello
+    handler: handler.handle
     events:
       - httpApi:
           path: /dairy/entry
