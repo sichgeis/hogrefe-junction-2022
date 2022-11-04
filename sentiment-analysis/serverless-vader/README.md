@@ -23,19 +23,41 @@ $ serverless deploy
 
 After successful deployment, you can call the created application via HTTP:
 
+#### JavaScript - Fetch
 ```bash
-curl https://xxxxxxx.execute-api.us-east-1.amazonaws.com/
+var myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+var raw = JSON.stringify({
+  "text": "The plot was fucking awesome."
+});
+
+var requestOptions = {
+  method: 'POST',
+  headers: myHeaders,
+  body: raw,
+  redirect: 'follow'
+};
+
+fetch("https://os3icu2tf7.execute-api.eu-central-1.amazonaws.com/dairy/entry", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
 ```
 
-Which should result in response similar to the following (removed `input` content for brevity):
+#### cURL
+```bash
+curl --location --request POST 'https://os3icu2tf7.execute-api.eu-central-1.amazonaws.com/dairy/entry' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "text": "The plot was fucking awesome."
+}'
+```
+
+Which should result in response similar to the following:
 
 ```json
-{
-  "message": "Go Serverless v3.0! Your function executed successfully!",
-  "input": {
-    "some": "thing"
-  }
-}
+0.659
 ```
 
 ### Local Development
