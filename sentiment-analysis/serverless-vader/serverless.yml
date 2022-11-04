@@ -16,5 +16,5 @@ functions:
     handler: handler.hello
     events:
       - httpApi:
-          path: /
-          method: get
+          path: /dairy/entry
+          method: post
