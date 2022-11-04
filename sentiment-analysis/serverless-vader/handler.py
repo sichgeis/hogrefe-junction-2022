@@ -9,9 +9,7 @@ def hello(event, context):
 
     body = {
         "sentence": sentence,
-        "score": str(vs),
-        "event": event,
-        "context": context
+        "score": str(vs)
     }
 
     response = {"statusCode": 200, "body": json.dumps(body)}
