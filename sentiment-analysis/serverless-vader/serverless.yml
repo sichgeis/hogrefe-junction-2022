@@ -16,6 +16,7 @@ functions:
   hello:
     handler: handler.handle
     events:
-      - httpApi:
+      - http:
           path: /dairy/entry
           method: post
+          cors: true

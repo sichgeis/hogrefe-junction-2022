@@ -12,6 +12,7 @@ def handle(event, context):
     score = analyzer.polarity_scores(text)
     compoundScore = score["compound"]
 
-    response = {"statusCode": 200, "body": json.dumps(compoundScore)}
+    response = {"statusCode": 200,
+                "body": json.dumps(compoundScore)}
 
     return response

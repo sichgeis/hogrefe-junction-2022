@@ -39,7 +39,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("https://os3icu2tf7.execute-api.eu-central-1.amazonaws.com/dairy/entry", requestOptions)
+fetch("https://y6ma0p9s09.execute-api.eu-central-1.amazonaws.com/dev/dairy/entry", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
@@ -47,7 +47,7 @@ fetch("https://os3icu2tf7.execute-api.eu-central-1.amazonaws.com/dairy/entry", r
 
 #### cURL
 ```bash
-curl --location --request POST 'https://os3icu2tf7.execute-api.eu-central-1.amazonaws.com/dairy/entry' \
+curl --location --request POST 'https://y6ma0p9s09.execute-api.eu-central-1.amazonaws.com/dev/dairy/entry' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "text": "The plot was fucking awesome."
