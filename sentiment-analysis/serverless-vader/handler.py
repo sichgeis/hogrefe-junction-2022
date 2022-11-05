@@ -13,6 +13,9 @@ def handle(event, context):
     compoundScore = score["compound"]
 
     response = {"statusCode": 200,
+                "headers": {
+                    'Access-Control-Allow-Origin': '*'
+                },
                 "body": json.dumps(compoundScore)}
 
     return response
