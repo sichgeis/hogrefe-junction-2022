@@ -39,7 +39,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("http://localhost:3000/dairy/entry", requestOptions)
+fetch("http://localhost:3000/dev/dairy/entry", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
@@ -47,7 +47,7 @@ fetch("http://localhost:3000/dairy/entry", requestOptions)
 
 #### cURL
 ```bash
-curl --location --request POST 'http://localhost:3000/dairy/entry' \
+curl --location --request POST 'http://localhost:3000/dev/dairy/entry' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "text": "The plot was fucking awesome."
