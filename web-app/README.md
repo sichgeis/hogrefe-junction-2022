@@ -18,6 +18,7 @@
 
 ```bash
 npm install
+```
 
 2. Run the development server:
 
@@ -38,7 +39,8 @@ npm run dev
 npm run build
 ```
 
-2. Git push to the "main" branch these changes, The Netlify hook takes care of the deployment 
+2. This prototype is retired. See the root README for private configuration
+   requirements before adapting or deploying it again.
 
 ## Learn More
 

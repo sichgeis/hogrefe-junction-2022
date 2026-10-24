@@ -1,0 +1,14 @@
+# Private local configuration and credentials
+.env*
+!.env.example
+*.pem
+*.key
+
+# Reproducible local environments and editor/build state
+.venv/
+venv/
+pyvenv.cfg
+__pycache__/
+*.py[cod]
+.idea/
+.DS_Store
